@@ -1,0 +1,14 @@
+body {
+    margin-top: 5em;
+    margin-left: 10em;
+    margin-right: 10em;
+    background-color: aliceblue;
+}
+
+.result--bad {
+    color: red;
+}
+
+.result--ok {
+    color: green;
+}

@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicios con Arrays en JavaScript Vanilla</title>
+    <link rel="stylesheet" href="./css/styles.css">
+</head>
+<body>
+    <h1>Ejercicios con Arrays en JavaScript Vanilla</h1>
+
+    <div>
+        <p>1. Dado el array ["A", "B", "C", "D", "E", "F", "G", "H", "I"] crea una función que saque por consola la longitud del array. Crea otra función que obtenga un elemento aleatorio del array y lo saque por consola.</p>
+        <fieldset>
+            <legend>Datos:</legend>
+            <p>Array: ["A", "B", "C", "D", "E", "F", "G", "H", "I"]</p>
+            <button id="button1a" onclick="arrayLength()">CUAL ES SU LONGITUD</button>
+            <button id="button1b" onclick="arrayElement()">EXTRAE UN ELEMENTO ALEATORIO</button>
+        </fieldset>
+        <fieldset>
+            <legend>Resultados:</legend>
+            <p id="result1a"></p>
+            <p id="result1b"></p>
+        </fieldset>
+    </div>
+
+    <div>
+        <p>2. Crea un array con los nombres de los planetas del Sistema Solar. Crea una función que los liste y los saque por consola.</p>
+        <fieldset>
+            <legend>Datos:</legend>
+            <p>Planetas: ["Mercurio", "Venus", "Tierra", "Martes", "Júpiter", "Saturno", "Urano" , "Neptuno"]</p>
+            <button id="button1" onclick="listArray()">LISTAR</button>
+        </fieldset>
+        <fieldset>
+            <legend>Resultados:</legend>
+            <p id="result2"></p>
+        </fieldset>
+    </div>
+
+    <div>
+        <p>3. Dado el array javascript1 = ["DOM", "BOM", "Funciones", "Arrays"], elimina "DOM" del array. Añade en su lugar el elemento "Objetos". Elimina el elemento "Arrays". Añade en su lugar el elemento "ArraysDifíciles". Haz una copia del array que solo incluya los últimos dos elementos. Obtén el índice del elemento "Funciones".</p>
+        <fieldset>
+            <legend>Datos:</legend>
+            <p>Array: ["DOM", "BOM", "Funciones", "Arrays"]</p>
+            <button id="button3a" onclick="repleaceArray('DOM', 'Objetos')">REMPLAZAR "DOM"</button>
+            <button id="button3b" onclick="repleaceArray('Arrays', 'ArraysDifíciles')">REMPLAZAR "Arrays"</button>
+            <button id="button3c" onclick="copyArray()">COPIAR</button>
+            <button id="button3d" onclick="indiceArray('Funciones')">INDICE DE "Funciones"</button>
+        </fieldset>
+        <fieldset>
+            <legend>Resultados:</legend>
+            <p id="result3a">["DOM", "BOM", "Funciones", "Arrays"]</p>
+            <p id="result3b">...copia</p>
+            <p id="result3c">El elemento "Funciones" ocupa la posición: "</p>
+        </fieldset>
+    </div>
+
+    <div>
+        <p>4. Crea una string, pásala a array y saca por consola la versión invertida de la original. Ejemplo: "Hola" -> [H, o, l, a] -> [a, l, o, H] -> "aloH"</p>
+        <fieldset>
+            <legend>Datos:</legend>
+            <p id="frase">Sé feliz con lo que tienes hasta que consigas lo que quieres</p>
+            <button id="button4a" onclick="convertToArray('Sé feliz con lo que tienes hasta que consigas lo que quieres')">1) CONVERTIR A ARRAY</button>
+            <button id="button4b" onclick="invertArray('Sé feliz con lo que tienes hasta que consigas lo que quieres')">2) INVERTIR EL ARRAY</button>
+            <button id="button4c" onclick="convertToString('Sé feliz con lo que tienes hasta que consigas lo que quieres')">3) CONVERTIR A STRING</button>
+        </fieldset>
+        <fieldset>
+            <legend>Resultados:</legend>
+            <p id="result4a">1)</p>
+            <p id="result4b">2)</p>
+            <p id="result4c">3)</p>
+        </fieldset>
+    </div>
+
+    <div>
+        <p>5. Crea dos arrays de la misma longitud y una función que cree un nuevo array que intercale sus elementos y vacíe los arrays originales. Por ejemplo, con los arrays arrayUno = [1, 2, 3] y arrayDos = [4, 5, 6] el resultado debería ser [1, 4, 2, 5, 3, 6]</p>
+        <fieldset>
+            <legend>Datos:</legend>
+            <p id="array1">arrayUno = [1, 2, 3]</p>
+            <p id="array2">arrayDos = [4, 5, 6]</p>
+            <button id="button5a" onclick="jointArray()">INTERCALAR LOS ELEMENTOS</button>
+        </fieldset>
+        <fieldset>
+            <legend>Resultados:</legend>
+            <p id="result5a"></p>
+            <p id="result5b"></p>
+        </fieldset>
+    </div>
+
+    <div>
+        <p>6. Crea un array con al menos 10 números y una función que los divida en otros dos arrays: uno para pares y otro para impares. A continuación, saca por consola ambos arrays resultantes concatenados.</p>
+        <fieldset>
+            <legend>Datos:</legend>
+            <p id="array1">array = [14, 52, 3, 78, 109, 33, 11, 10, 2, 223, 87]</p>
+            <button id="button6a" onclick="splitArray()">DIVIDE EN PARES E IMPARES</button>
+        </fieldset>
+        <fieldset>
+            <legend>Resultados:</legend>
+            <p id="result6a"></p>
+            <p id="result6b"></p>
+        </fieldset>
+    </div>
+
+    <div>
+        <p>7. Utilizando el array del ejercicio anterior, crea una función que saque por consola únicamente los números mayores que 5.</p>
+        <fieldset>
+            <legend>Datos:</legend>
+            <p id="array1">array = [14, 52, 3, 78, 109, 33, 11, 10, 2, 223, 87]</p>
+            <button id="button7" onclick="mayoresQue(5)">EXTRAE LOS MAYORES QUE 5</button>
+        </fieldset>
+        <fieldset>
+            <legend>Resultados:</legend>
+            <p id="result7"></p>
+        </fieldset>
+    </div>
+
+    <div>
+        <p>8. Dados los arrays javascript1 = ["DOM", "BOM", "Funciones", "Arrays"] y javascript2 = ["Objetos", "Arrays", "ParseInt"], crea una función que determine si se repite algún elemento y lo saque por consola.</p>
+        <fieldset>
+            <legend>Datos:</legend>
+            <p id="array1">javascript1 = ["DOM", "BOM", "Funciones", "Arrays"]</p>
+            <p id="array2">javascript2 = ["Objetos", "Arrays", "ParseInt"]</p>
+            <button id="button8" onclick="findSimilars()">EXTRAE ELEMENTOS REPETIDOS</button>
+        </fieldset>
+        <fieldset>
+            <legend>Resultados:</legend>
+            <p id="result8"></p>
+        </fieldset>
+    </div>
+
+    <div>
+        <p>9. Imagina que estamos en una carrera y los nombres de las personas que van llegando a la meta se van almacenando en un array (el primero quedaría en la primera posición del array, el segundo en la segunda, etc.). Crea un array con por lo menos cinco nombres. Desestructura el array utilizando el operador rest de manera que puedas llamar al ganador, al segundo y al resto de competidores por separado.</p>
+        <fieldset>
+            <legend>Datos:</legend>
+            <p id="race_finishers_record">Registro de llegada: 1) Sandra Key, 2) Hoyt Brock, 3) Lee Hart, 4) Maya Jenkins, 5) Nathaniel Ramsey ...</p>
+            <button id="button9" onclick="showWinners()">MUESTRA A LOS GANADORES</button>
+        </fieldset>
+        <fieldset>
+            <legend>Resultados:</legend>
+            <p id="result9"></p>
+        </fieldset>
+    </div>
+
+    <div>
+        <p>10. Crea un objeto que almacene los datos de una persona (nombre, apellidos, edad, dirección, ciudad, país... y lo que quieras). Crea una función que saque por consola el nombre completo (nombre y apellidos) de la persona a modo de string.</p>
+        <fieldset>
+            <legend>Datos de la persona:</legend>
+                <ul>
+                    <li>Given name: "Kibo"</li>
+                    <li>Surename: "Dorsey"</li>
+                    <li>Country: "Nigeria"</li>
+                    <li>City: "Chernihiv"</li>
+                    <li>Postal/Zip: "2286"</li>
+                    <li>Addres: "822-3418 Vestibulum St."</li>
+                    <li>Phone: "(357) 412-8520"</li>
+                    <li>Email: "urna@hotmail.couk"</li>
+                    <li>Birthdate: "Jul 27, 2023"</li>
+                </ul>
+            <button id="button10" onclick="showName()">¿CUÁL ES EL NOMBRE COMPLETO?</button>
+        </fieldset>
+        <fieldset>
+            <legend>Resultados:</legend>
+            <p id="result10"></p>
+        </fieldset>
+    </div>
+
+    <div>
+        <p>11. Utiliza el objeto del ejercicio anterior y mediante desestructuración accede únicamente a tres de esas propiedades.</p>
+        <fieldset>
+            <legend>Datos de la persona:</legend>
+                <ul>
+                    <li>Given name: "Kibo"</li>
+                    <li>Surename: "Dorsey"</li>
+                    <li>Country: "Nigeria"</li>
+                    <li>City: "Chernihiv"</li>
+                    <li>Postal/Zip: "2286"</li>
+                    <li>Addres: "822-3418 Vestibulum St."</li>
+                    <li>Phone: "(357) 412-8520"</li>
+                    <li>Email: "urna@hotmail.couk"</li>
+                    <li>Birthdate: "Jul 27, 2023"</li>
+                </ul>
+            <button id="button11a" onclick="showCountry()">¿EN QUE PAÍS VIVE?</button>
+            <button id="button11b" onclick="showEmail()">¿CUÁL ES SU EMAIL?</button>
+            <button id="button11c" onclick="showBrithdate()">¿CUANDO NACIO?</button>
+        </fieldset>
+        <fieldset>
+            <legend>Resultados:</legend>
+            <p id="result10a"></p>
+            <p id="result10b"></p>
+            <p id="result10c"></p>
+        </fieldset>
+    </div>
+
+    <div>
+        <p>12. Crea un array que contenga al menos tres objetos con las mismas propiedades (al menos tres) y distintos valores. Crea una función que saque por consola el valor de una de las propiedades para todos los objetos.</p>
+        <fieldset>
+            <legend>Datos de diferentes personas:</legend>
+                        <p>
+                            "name": "Idona Chase",
+                            "country": "Sweden",
+                            "city": "Bydgoszcz",
+                            "postalZip": "384915",
+                            "address": "P.O. Box 611, 8363 Sed, Av.",
+                            "phone": "(241) 575-5841",
+                            "email": "ultrices.vivamus@hotmail.couk",
+                            "birthdate": "Oct 17, 2022"
+                        </p>
+                    
+                        <p>
+                            "name": "Brittany Dejesus",
+                            "country": "Sweden",
+                            "city": "Ciudad Apodaca",
+                            "postalZip": "076253",
+                            "address": "Ap #293-2807 Placerat. Ave",
+                            "phone": "1-789-898-3175",
+                            "email": "nam.interdum@icloud.net",
+                            "birthdate": "Sep 9, 2022"
+                        </p>
+
+                        <p>
+                            "name": "Kadeem Boyle",
+                            "country": "Russian Federation",
+                            "city": "Mitú",
+                            "postalZip": "168219",
+                            "address": "P.O. Box 500, 5701 Et Avenue",
+                            "phone": "(565) 343-5612",
+                            "email": "a.sollicitudin@google.ca",
+                            "birthdate": "Apr 2, 2023"
+                        </p>
+
+                        <p>
+                            "name": "Ezekiel Collier",
+                            "country": "Pakistan",
+                            "city": "Anklam",
+                            "postalZip": "28844",
+                            "address": "Ap #495-7132 Vulputate Road",
+                            "phone": "1-602-837-5678",
+                            "email": "ullamcorper@aol.edu",
+                            "birthdate": "May 13, 2022"
+                        </p>
+
+                        <p>
+                            "name": "Tanner Kirk",
+                            "country": "Spain",
+                            "city": "Falun",
+                            "postalZip": "27842",
+                            "address": "Ap #631-1463 Vestibulum, St.",
+                            "phone": "(556) 726-0354",
+                            "email": "tempor@aol.edu",
+                            "birthdate": "May 14, 2022"
+                        </p>
+            <button id="button12" onclick="whereTheyLive()">¿DONDE VIVEN ESTAS PERSONAS?</button>
+        </fieldset>
+        <fieldset>
+            <legend>Resultados:</legend>
+            <p id="result12"></p>
+        </fieldset>
+    </div>
+
+    <div>
+        <p>13. Crea un objeto que contenga una receta de cocina, con propiedades asignadas a su nombre, tiempo de preparación e ingredientes. Haz una función que saque por consola el nombre, el tiempo y una lista de los ingredientes.</p>
+    </div>
+    <div>
+        <p>14. Reutiliza la receta del ejercicio anterior y añádela a un array que contenga varias recetas similares, con las mismas propiedades. Utiliza también la función del ejercicio anterior y saca por consola todas las recetas de tu array.</p>
+    </div>
+
+    <div>
+        <p>15. Haz lo mismo declarando una clase "receta" e instanciando cada una de las nuevas recetas. Luego añádelas a un array y reutiliza la función que habías creado en el ejercicio anterior para sacarlas por consola.</p>
+    </div>
+
+    <script src="./js/arrays.js"></script>
+</body>
+</html>
