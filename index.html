@@ -260,9 +260,33 @@
 
     <div>
         <p>13. Crea un objeto que contenga una receta de cocina, con propiedades asignadas a su nombre, tiempo de preparación e ingredientes. Haz una función que saque por consola el nombre, el tiempo y una lista de los ingredientes.</p>
+        <fieldset>
+            <legend>Receta en forma de un objeto:</legend>
+            <p>{
+                "titulo": "Salmon al horno",
+                "tiempoElaboracion": "10",
+                "tiempoCoccion": "10",
+                "comensales": 2,
+                "ingredientes": [
+                    "2 lomos de salmón fresco",
+                    "80g de mayonesa",
+                    "1 clara de huevo",
+                    "1 diente de ajo",
+                    "1 limón",
+                    "sal"],
+                "instrucciones": "Encendemos el horno, con calor arriba y abajo, a 200º C. Limpiamos y secamos los lomos de salmón, asegurando que no quedan escamas en la piel. Sazonamos, colocamos en una fuente de horno y reservamos. Pelamos el diente de ajo, rallamos la mitad y lo mezclamos con la mayonesa. Añadimos un poco de ralladura de limón y removemos. Batimos la clara de huevo a punto de nieve. Mezclamos con la mayonesa suavemente y con movimientos envolventes para que no pierda el aire incorporado con el batido. Extendemos una capa de la espuma de mayonesa sobre los lomos de salmón, introducimos en el horno y cocemos durante 10 minutos (el tiempo exacto dependerá del grosor de los lomos). Si, una vez hecho el salmón, la superficie no se dorara y quisiéramos darle un poco de color, añadimos un toque de grill final."
+            }</p>
+            <button id="button13" onclick="showTheRecipe()">EXTRAE DATOS Y MUESTRA LA RECETA</button>
+        </fieldset>
+        <fieldset>
+            <legend>Resultados:</legend>
+            <p id="result13"></p>
+        </fieldset>
     </div>
+
     <div>
         <p>14. Reutiliza la receta del ejercicio anterior y añádela a un array que contenga varias recetas similares, con las mismas propiedades. Utiliza también la función del ejercicio anterior y saca por consola todas las recetas de tu array.</p>
+        
     </div>
 
     <div>

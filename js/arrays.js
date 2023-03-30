@@ -267,7 +267,27 @@ const whereTheyLive = () => {
 }
 
 // Ejercicio 13
-const name13 = () => {
+const showTheRecipe = () => {
+    const receta = {
+        "titulo": "Salmon al horno",
+        "tiempoElaboracion": 10,
+        "tiempoCoccion": 10,
+        "comensales": 2,
+        "ingredientes": [
+            "2 lomos de salmón fresco",
+            "80g de mayonesa",
+            "1 clara de huevo",
+            "1 diente de ajo",
+            "1 limón",
+            "sal"],
+        "instrucciones": "Encendemos el horno, con calor arriba y abajo, a 200º C. Limpiamos y secamos los lomos de salmón, asegurando que no quedan escamas en la piel. Sazonamos, colocamos en una fuente de horno y reservamos. Pelamos el diente de ajo, rallamos la mitad y lo mezclamos con la mayonesa. Añadimos un poco de ralladura de limón y removemos. Batimos la clara de huevo a punto de nieve. Mezclamos con la mayonesa suavemente y con movimientos envolventes para que no pierda el aire incorporado con el batido. Extendemos una capa de la espuma de mayonesa sobre los lomos de salmón, introducimos en el horno y cocemos durante 10 minutos (el tiempo exacto dependerá del grosor de los lomos). Si, una vez hecho el salmón, la superficie no se dorara y quisiéramos darle un poco de color, añadimos un toque de grill final."
+    }
+
+    document.getElementById("result13").innerHTML = `
+        <h3>${receta.titulo}</h3>
+        <p>Tiempo de elaboración: ${receta.tiempoElaboracion}</p>
+        <p>Ingredientes: ${receta.ingredientes.toString()}</p>
+        `;
 }
 
 // Ejercicio 14
